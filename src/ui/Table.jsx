@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-/* eslint-disable react/prop-types */
+
 import { createContext, useContext } from "react";
 import styled from "styled-components";
 
@@ -88,7 +88,7 @@ function Row({ children }) {
   );
 }
 function Body({ data, render }) {
-  if (!data.length) return <Empty>Nn data to show now!</Empty>;
+  if (!data.length) return <Empty>No data to show now!</Empty>;
   return <StyledBody>{data.map(render)}</StyledBody>;
 }
 Table.Header = Header;

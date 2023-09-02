@@ -1,25 +1,14 @@
-/* eslint-disable react/display-name */
-/* eslint-disable react/prop-types */
+import UpdateSettingsForm from "../features/settings/UpdateSettingsForm";
+import Heading from "../ui/Heading";
+import Row from "../ui/Row";
 
-// initial component
-export const Greeting = (props) => {
-  return <div>Hello, {props.name}!</div>;
-};
+function Settings() {
+  return (
+    <Row>
+      <Heading as="h1">Update hotel settings</Heading>
+      <UpdateSettingsForm />
+    </Row>
+  );
+}
 
-// Define the HOC
-const withBorder = (WrappedComponent) => {
-  return (props) => {
-    const borderStyle = { border: "2px solid black", padding: "10px" };
-
-    return (
-      <div style={borderStyle}>
-        <WrappedComponent {...props} />
-      </div>
-    );
-  };
-};
-
-// Create an enhanced component using the HOC
-const GreetingWithBorder = withBorder(Greeting);
-
-export default GreetingWithBorder;
+export default Settings;

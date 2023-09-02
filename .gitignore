@@ -7,6 +7,18 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# added
+.env
+package copy.json
+Modal V1.jsx
+Settings V1.jsx
+CabinRow V1.jsx
+CabinTable V1.jsx
+CabinTable V2.jsx
+CreateCabinForm V1.jsx
+Settings V1.jsx
+
+
 node_modules
 dist
 dist-ssr

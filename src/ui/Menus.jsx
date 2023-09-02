@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import styled from "styled-components";
 import { createContext, useContext, useState } from "react";
@@ -87,6 +86,7 @@ function Toggle({ id }) {
   // we need to open the menu it's not open and close it if it's open or if another one is open + calculate the position where we are gonna show the menu
   function handleClick(e) {
     // get the closest button parent and get its position in the screen using getBoundingClientRect function
+    e.stopPropagation();
     const rect = e.target.closest("button").getBoundingClientRect();
     setPosition({
       x: window.innerWidth - rect.width - rect.x,
@@ -103,7 +103,7 @@ function Toggle({ id }) {
 
 function List({ id, children }) {
   const { openId, position, close } = useContext(MenusContext);
-  const ref = useOutsideClick(close);
+  const ref = useOutsideClick(close, false);
   if (openId !== id) return null;
   return createPortal(
     <StyledList position={position} ref={ref}>
