@@ -21,7 +21,8 @@ export default function Sidebar() {
       <Logo />
       <MainNav />
       {/* chow Uploader component only to the admin */}
-      {user?.email === "ayoub@gmail.com" ? <Uploader /> : null}
+      {/* {user?.email === "ayoub@gmail.com" ? <Uploader /> : null} */}
+      <Uploader />
     </StyledSidebar>
   );
 }
