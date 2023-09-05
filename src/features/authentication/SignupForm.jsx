@@ -45,7 +45,9 @@ function SignupForm() {
               message: "Please provide a valid email address",
             },
           })}
-          disabled={isSigningUp}
+          // disabled={isSigningUp}
+          disabled={true}
+          placeholder="disabled for the public"
         />
       </FormRow>
 

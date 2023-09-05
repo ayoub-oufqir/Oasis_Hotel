@@ -26,7 +26,9 @@ function UpdatePasswordForm() {
           type="password"
           id="password"
           autoComplete="current-password"
-          disabled={isUpdating}
+          // disabled={isUpdating}
+          disabled={true}
+          placeholder="disabled for the public"
           {...register("password", {
             required: "This field is required",
             minLength: {

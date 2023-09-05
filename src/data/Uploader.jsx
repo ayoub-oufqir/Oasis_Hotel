@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useState } from "react";
 import { isFuture, isPast, isToday } from "date-fns";
 import supabase from "../services/supabase";
@@ -139,14 +140,14 @@ function Uploader() {
       }}
     >
       <h3>SAMPLE DATA</h3>
-
-      <Button onClick={uploadAll} disabled={isLoading}>
-        Upload ALL
-      </Button>
+      <p>Click this button to upload sample data than refresh 👇👇</p>
 
       <Button onClick={uploadBookings} disabled={isLoading}>
         Upload bookings ONLY
       </Button>
+      {/* <Button onClick={uploadAll} disabled={isLoading}>
+        Upload ALL
+      </Button> */}
     </div>
   );
 }
